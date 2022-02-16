@@ -1,0 +1,1 @@
+Añadir en esta carpeta las hojas de estilo globales o de cada archivo.

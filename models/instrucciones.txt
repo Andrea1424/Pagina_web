@@ -1,0 +1,1 @@
+Añadir en esta carpeta todas la funciones que utlizará el sistema.

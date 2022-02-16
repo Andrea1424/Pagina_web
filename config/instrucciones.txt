@@ -1,0 +1,2 @@
+Añadir en esta carpeta la conexión con la base de datos.
+Se hará como PDO y MySQLi.
