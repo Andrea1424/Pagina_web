@@ -43,11 +43,11 @@ if (isset($_SESSION["username"])) {
                 <form action="../controllers/loginUser.php" method="post">
                     <div class="mb-4">
                         <label for="email" class="form-label">Correo Electronico</label>
-                        <input type="email" class="form-control" name="correo" placeholder="correo@dominio.com">
+                        <input type="email" class="form-control" name="correo" maxlength="30" placeholder="correo@dominio.com">
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" name="password" minlength="6" maxlength="20" placeholder="********">
+                        <input type="password" class="form-control" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8" maxlength="20" placeholder="********">
                         <span style="color: red; font-size: 12px;">La contraseña es mayor a 8 caracteres</span>
                     </div>
                     <div class="mb-4 form-check">
