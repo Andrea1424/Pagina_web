@@ -1,8 +1,12 @@
 <?php
 
 //Login para entrar al sistema
-$correo = $_POST["correo"];
-$pass = md5($_POST["password"]);
+if(isset($_POST["correo"])){
+    $correo = $_POST["correo"];
+}
+if(isset($_POST["password"])){
+    $pass = md5($_POST["password"]);
+}
 if(isset($_POST["conected"])){
     $button_session = $_POST["conected"];
 }
@@ -26,7 +30,8 @@ if(isset($correo) AND isset($pass)){
         }
         //Envia a la ventana home ya que si pudo ingresar
         echo"<script type='text/javascript'>
-            window.location='../views/home.php';
+            var jsVar = window.prompt('Escribe el código que enviamos a tu correo');
+            window.location.href ='../models/codigo.php' + '?w=' + jsVar;
             </script>";
     }else{//No econtro ningun registro con esos datos
         //Envia a la ventana login de nuevo para entrar de nuevo
@@ -40,4 +45,6 @@ if(isset($correo) AND isset($pass)){
             window.location='../views/login.php';
             </script>";
 }
+
 ?>
+
