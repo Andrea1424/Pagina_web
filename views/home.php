@@ -1,8 +1,11 @@
 <?php
 @session_start();
+$xd = 3;
 if (!isset($_SESSION["username"]) && !isset($_COOKIE["cookie"])) {
   header("Location: login.php");
 }
+50fcbe963542937ca78f91a2f610c23a
+if($xd === 1){
 
 ?>
 
@@ -24,10 +27,10 @@ if (!isset($_SESSION["username"]) && !isset($_COOKIE["cookie"])) {
 <body>
     <header>
         <nav>
-            <a href="#">Inicio</a>
+            <a href="home.php">Inicio</a>
             <a href="#">Acerca de</a>
             <a href="#">Productos</a>
-            <a href="#">Servicios</a>
+            <a href="servicios.php">Servicios</a>
             <a href="#">Contacto</a>
             <a><?php echo($_COOKIE["username"]);?></a>
             <a href="../controllers/logout.php">  
@@ -35,7 +38,6 @@ if (!isset($_SESSION["username"]) && !isset($_COOKIE["cookie"])) {
             </a>
         </nav>
         <section class="textos-header">
-
             <h1>Los mejores productos a los mejores precios</h1>
             <h2>El mejor sitio para estudiantes </h2>
         </section>
@@ -222,3 +224,11 @@ if (!isset($_SESSION["username"]) && !isset($_COOKIE["cookie"])) {
 </body>
 
 </html>
+
+<?php
+}else if($xd === 2){
+    header("Location: ../views/crud-usuarios.html");
+}else{
+    header("Location: ../views/form-vendedor.html");
+}
+?>
