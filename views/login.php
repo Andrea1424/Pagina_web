@@ -15,12 +15,15 @@ if (isset($_SESSION["username"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/header.css">
     <style>
-        body {
+        /* body {
             background: #ffe259;
             background: linear-gradient(to right, #E2F4BB, #E9F7CA);
-        }
+        } */
         
         .bg {
             background-image: url('https://www.altonivel.com.mx/assets/images/Estructura_2015/Consultoria/Recursos_Humanos/ingenieria-oportunidades.jpg');
@@ -30,8 +33,22 @@ if (isset($_SESSION["username"])) {
 </head>
 
 <body>
-
-    <div class="container w-75 bg-primary mt-5 rounded shadow">
+<header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Productos</a>
+            <a href="servicios.php">Servicios</a>
+            <a href="#">Contacto</a>
+            <a href="login.php">login</a>
+            <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: rgb(255, 255, 255);"></path>
+            </svg></div>
+        </nav>
+    </header>
+    <div class="container">
         <div class="row align-items-stretch">
             <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
 
